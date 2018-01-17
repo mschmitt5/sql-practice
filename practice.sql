@@ -74,3 +74,8 @@ SELECT clapProfileId, profileName
 FROM clap
 INNER JOIN profile on clap.clapProfileId = profile.profileId
 WHERE clapId = "8c08c76e-318c-40a7-bf3b-c8bf2795bb3b";
+
+SELECT clapArticleId, articleTitle
+FROM clap
+INNER JOIN article ON clap.clapArticleId = article.articleId
+WHERE clapId = "8c08c76e-318c-40a7-bf3b-c8bf2795bb3b";

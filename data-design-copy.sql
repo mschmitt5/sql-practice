@@ -35,21 +35,3 @@ CREATE TABLE clap(
   FOREIGN KEY(clapProfileId) REFERENCES profile(profileId),
   PRIMARY KEY(clapId)
 );
-
-INSERT INTO profile (profileId, profileEmail, profileHash, profileName, profileSalt, profileStatement)
-VALUES (UNHEX(REPLACE("f135186a-f29e-41b4-84bf-504b1f008d4b")), "schmitt.mary7@gmail.com", unhex(replace("7e321d5d-0e80-4a79-8106-05f737b1fd6a")), "Mary Schmitt", unhex(replace("903a5a88-b04d-439e-8aa1-a1c370e60ef3
-")), "Here is a string. My author profile."
-);
-
-INSERT INTO article (articleId, articleProfileId, articleText, articleTitle) VALUES (unhex(replace("cb228c4c-855e-4dc0-ae5f-e0b7a3ee4fb6
-")), unhex(replace("f135186a-f29e-41b4-84bf-504b1f008d4b")), "Another string. What a short article.", "String. Title is as long as the article"
-);
-
-UPDATE profile
-SET profileEmail = "macmillan.mary7@gmail.com", profileName = "Mary MacMillan"
-  WHERE profileId = "f135186a-f29e-41b4-84bf-504b1f008d4b";
-
-UPDATE article
-SET articleTitle = "Short Title";
-
-DELETE FROM article

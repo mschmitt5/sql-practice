@@ -45,12 +45,15 @@ INSERT INTO article (articleId, articleProfileId, articleText, articleTitle) VAL
 ")), unhex(replace("f135186a-f29e-41b4-84bf-504b1f008d4b")), "Another string. What a short article.", "String. Title is as long as the article"
 );
 
+INSERT INTO clap (clapId, clapArticleId, clapProfileId) VALUES (unhex(replace("8c08c76e-318c-40a7-bf3b-c8bf2795bb3b")), unhex(replace("cb228c4c-855e-4dc0-ae5f-e0b7a3ee4fb6")), unhex(replace("f135186a-f29e-41b4-84bf-504b1f008d4b")));
+
 UPDATE profile
 SET profileEmail = "macmillan.mary7@gmail.com", profileName = "Mary MacMillan"
   WHERE profileId = "f135186a-f29e-41b4-84bf-504b1f008d4b";
 
 UPDATE article
-SET articleTitle = "Short Title";
+SET articleTitle = "Short Title"
+WHERE articleId = "cb228c4c-855e-4dc0-ae5f-e0b7a3ee4fb6";
 
 DELETE FROM article
 WHERE articleId = "cb228c4c-855e-4dc0-ae5f-e0b7a3ee4fb6

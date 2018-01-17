@@ -66,3 +66,8 @@ WHERE articleProfileId = "f135186a-f29e-41b4-84bf-504b1f008d4b";
 SELECT profileName, profileEmail, profileStatement
 FROM profile
 WHERE profileId = "f135186a-f29e-41b4-84bf-504b1f008d4b";
+
+SELECT clapProfileId, profileName
+FROM clap
+INNER JOIN profile on clap.clapProfileId = profile.profileId
+WHERE clapId = "8c08c76e-318c-40a7-bf3b-c8bf2795bb3b";

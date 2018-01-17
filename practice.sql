@@ -53,3 +53,16 @@ UPDATE article
 SET articleTitle = "Short Title";
 
 DELETE FROM article
+WHERE articleId = "cb228c4c-855e-4dc0-ae5f-e0b7a3ee4fb6
+";
+
+DELETE FROM profile
+WHERE profileId = "f135186a-f29e-41b4-84bf-504b1f008d4b";
+
+SELECT articleTitle, articleText
+FROM article
+WHERE articleProfileId = "f135186a-f29e-41b4-84bf-504b1f008d4b";
+
+SELECT profileName, profileEmail, profileStatement
+FROM profile
+WHERE profileId = "f135186a-f29e-41b4-84bf-504b1f008d4b";
